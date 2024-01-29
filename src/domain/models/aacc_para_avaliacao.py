@@ -2,7 +2,6 @@ class AaccParaAvaliacao():
 
     def __init__(self, id_avaliador: str, id_aacc: str, status: int, comentarios: str) -> None:
 
-
         # STATUS_CHOICES = [
         #     (0, 'Aguardando'),
         #     (1, 'Deferida'),
