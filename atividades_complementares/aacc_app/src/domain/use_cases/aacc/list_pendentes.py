@@ -8,7 +8,7 @@ class AaccListaPendentesInterface(ABC):
     def listar_nao_encaminhadas(self) -> List[Aacc]: pass
 
     @abstractmethod
-    def listar_nao_avaliadas(self) -> List[Aacc]: pass
+    def listar_nao_avaliadas(self, id_avaliador: str) -> List[Aacc]: pass
 
     @abstractmethod
     def listar_nao_confirmadas(self) -> List[Aacc]: pass
