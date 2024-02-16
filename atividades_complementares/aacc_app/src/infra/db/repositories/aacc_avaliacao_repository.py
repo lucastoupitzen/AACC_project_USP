@@ -3,8 +3,8 @@ from src.data.interfaces.aacc_avaliacao_repository import AaccParaAvaliacaoRepos
 from src.domain.models.aacc import Aacc
 from src.domain.models.aacc_para_avaliacao import AaccParaAvaliacao
 from src.domain.models.user import User
-from .....models import Aacc as AACC_db
-from .....models import AaccParaAvaliacao as AaccParaAvaliacao_db
+from models import Aacc as AACC_db
+from models import AaccParaAvaliacao as AaccParaAvaliacao_db
 
 class AaccParaAvaliacaoRepository(AaccParaAvaliacaoRepositoryInterface):
 

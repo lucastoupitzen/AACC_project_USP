@@ -1,7 +1,7 @@
 from typing import List
 from src.data.interfaces.aacc_repository import AaccRepositoryInterface
 from src.domain.models.aacc import Aacc
-from .....models import Aacc as AACC_db
+from models import Aacc as AACC_db
 
 class AaccRepository(AaccRepositoryInterface):
 
