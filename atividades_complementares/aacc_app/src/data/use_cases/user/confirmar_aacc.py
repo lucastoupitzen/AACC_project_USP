@@ -1,5 +1,5 @@
-from src.data.interfaces.aacc_repository import AaccRepositoryInterface
-from src.domain.use_cases.user.confirmar_aacc import ConfirmarAaccInterface
+from .....src.data.interfaces.aacc_repository import AaccRepositoryInterface
+from .....src.domain.use_cases.user.confirmar_aacc import ConfirmarAaccInterface
 
 class ConfirmarAacc(ConfirmarAaccInterface):
 

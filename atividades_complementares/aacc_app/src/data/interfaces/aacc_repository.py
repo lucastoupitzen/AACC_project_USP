@@ -1,6 +1,6 @@
 from typing import List
 from abc import ABC, abstractmethod
-from src.domain.models.aacc import Aacc
+from ....src.domain.models.aacc import Aacc
 
 class AaccRepositoryInterface(ABC):
 

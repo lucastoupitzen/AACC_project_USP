@@ -1,7 +1,7 @@
 from typing import List
 from abc import ABC, abstractmethod
-from src.domain.models.aacc import Aacc
-from src.domain.models.aacc_para_avaliacao import AaccParaAvaliacao
+from ....src.domain.models.aacc import Aacc
+from ....src.domain.models.aacc_para_avaliacao import AaccParaAvaliacao
 
 class AaccParaAvaliacaoRepositoryInterface(ABC):
 

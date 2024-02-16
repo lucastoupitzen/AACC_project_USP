@@ -1,9 +1,9 @@
 from typing import List
-from src.domain.models.aacc import Aacc
-from src.presentation.http_types.http_request import HttpRequest
-from src.presentation.http_types.http_response import HttpResponse
-from src.presentation.interfaces.controller_interface import ControllerInterface
-from src.domain.use_cases.aacc.list_pendentes import AaccListaPendentesInterface
+from ....src.domain.models.aacc import Aacc
+from ....src.presentation.http_types.http_request import HttpRequest
+from ....src.presentation.http_types.http_response import HttpResponse
+from ....src.presentation.interfaces.controller_interface import ControllerInterface
+from ....src.domain.use_cases.aacc.list_pendentes import AaccListaPendentesInterface
 
 
 class NaoEncaminhadasController(ControllerInterface):

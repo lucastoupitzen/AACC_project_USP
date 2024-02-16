@@ -1,8 +1,8 @@
 from typing import List
-from src.domain.models.aacc import Aacc
-from src.domain.use_cases.aacc.list_pendentes import AaccListaPendentesInterface
-from src.data.interfaces.aacc_repository import AaccRepositoryInterface
-from src.data.interfaces.aacc_avaliacao_repository import AaccParaAvaliacaoRepositoryInterface
+from .....src.domain.models.aacc import Aacc
+from .....src.domain.use_cases.aacc.list_pendentes import AaccListaPendentesInterface
+from .....src.data.interfaces.aacc_repository import AaccRepositoryInterface
+from .....src.data.interfaces.aacc_avaliacao_repository import AaccParaAvaliacaoRepositoryInterface
 
 class AaccListaPendentes(AaccListaPendentesInterface):
 

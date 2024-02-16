@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import List
-from src.domain.models.aacc import Aacc
+from .....src.domain.models.aacc import Aacc
 
 class AaccListaPendentesInterface(ABC):
 

@@ -1,6 +1,6 @@
-from src.domain.use_cases.user.avaliar_aacc import AvaliarAaccInterface
-from src.data.interfaces.aacc_avaliacao_repository import AaccParaAvaliacaoRepositoryInterface
-from src.data.interfaces.aacc_repository import AaccRepositoryInterface
+from .....src.domain.use_cases.user.avaliar_aacc import AvaliarAaccInterface
+from .....src.data.interfaces.aacc_avaliacao_repository import AaccParaAvaliacaoRepositoryInterface
+from .....src.data.interfaces.aacc_repository import AaccRepositoryInterface
 
 class AvaliarAacc(AvaliarAaccInterface):
 

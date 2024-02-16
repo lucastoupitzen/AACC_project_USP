@@ -1,7 +1,7 @@
-from src.presentation.http_types.http_request import HttpRequest
-from src.presentation.http_types.http_response import HttpResponse
-from src.presentation.interfaces.controller_interface import ControllerInterface
-from src.domain.use_cases.user.confirmar_aacc import ConfirmarAaccInterface
+from ....src.presentation.http_types.http_request import HttpRequest
+from ....src.presentation.http_types.http_response import HttpResponse
+from ....src.presentation.interfaces.controller_interface import ControllerInterface
+from ....src.domain.use_cases.user.confirmar_aacc import ConfirmarAaccInterface
 
 
 class ConfirmarAaccController(ControllerInterface):
