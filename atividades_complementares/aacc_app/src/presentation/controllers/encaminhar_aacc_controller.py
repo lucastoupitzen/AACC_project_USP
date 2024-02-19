@@ -10,11 +10,13 @@ class EncaminharAaccController(ControllerInterface):
         self.__use_case = use_case
 
     def handle(self, http_request: HttpRequest) -> HttpResponse:
-
+        
         aacc : str = http_request.query_params["id_aacc"]
+        avaliador : str = http_request.query_params["id_avaliador"]
 
         response = self.__use_case.encaminhar_aacc(
-            aacc= aacc
+            aacc= aacc,
+            avaliador= avaliador
         )
 
         return HttpResponse (

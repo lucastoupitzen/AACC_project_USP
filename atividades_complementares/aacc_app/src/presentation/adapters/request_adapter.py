@@ -6,13 +6,17 @@ from ....src.presentation.interfaces.controller_interface import ControllerInter
 
 def request_adapter(request: DjangoRequest, controller: ControllerInterface) -> HttpResponse:
 
+    body = request.body
+
+    if request.method == "GET": query_params = request.GET
+    if request.method == "POST": query_params = request.POST
+
     http_request = HttpRequest(
 
-        body= request.body,
+        body= body,
         headers = request.headers,
-        # query_params=request.args,
-        # path_params=request.view_args,
-        # url=request.full_path
+        query_params= query_params,
+        
     )
 
     http_response = controller.handle(http_request)

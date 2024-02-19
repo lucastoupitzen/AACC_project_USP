@@ -23,7 +23,7 @@ class AaccRepository(AaccRepositoryInterface):
     @classmethod
     def select_aacc_by_status(cls, status: int) -> List[Aacc]:
         try:
-            query = AACC_db.objects.filter(status=0)
+            query = AACC_db.objects.filter(status= status)
             response : List[Aacc] = []
             for dado in query:
                 aacc_registrada = Aacc(
