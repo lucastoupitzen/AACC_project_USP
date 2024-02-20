@@ -1,0 +1,61 @@
+.headerusp {
+    background-color: #1094AB;
+}
+
+.logo {
+    width: 30dvw;
+}
+
+
+tr {
+    border: 2px solid rgba(69, 68, 68, 0.2);
+}
+
+
+
+
+
+
+
+.scrollable-div {
+    max-height: 65dvh; /* Defina a altura máxima desejada */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+}
+
+.visualizar {
+    background-color: #1094AB;
+    border: none;
+}
+
+.encaminhar {
+    background-color: #F6AE38;
+    border: none;
+}
+
+.avaliacao {
+    background-color: #F6AE38;
+    border: none;
+}
+
+.confirmar {
+    background-color: rgb(27, 174, 27);
+    border: none;
+}
+
+.titulo-tabela{
+    padding-bottom: 3dvh;
+    padding-top: 2dvh;
+}
+
+.mainframe {
+    width: 60dvw;
+    background-color: white;
+}
+
+.titulo-home{
+    padding-bottom: 3dvh;
+    padding-top: 2dvh;
+    padding-left: 3dvw;
+    border-bottom: 5px solid #F6AE38;
+}
+

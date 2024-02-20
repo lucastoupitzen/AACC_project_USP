@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+</head>
+<body class="bg-light">
+    <header class="navbar navbar-expand-lg navbar-light headerusp">
+        <!-- Canto Esquerdo - Logotipo ou Imagem -->
+        <div class="navbar-brand logo" href="#">
+            <img src="{% static 'images/logotipo.png'%}" alt="Logo"  class="d-inline-block align-top">
+        </div>
+
+        <!-- Canto Direito - Barra de Navegação -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <p class="nav-link text-light" >{{ request.user.first_name }} {{ request.user.last_name }}</p>
+                </li>
+                <li class="nav-item">
+                    <p class="nav-link text-light" id="nrousp">{{ request.user }}</p>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ajuda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Sair</a>
+                </li>
+                
+            </ul>
+        </div>
+    </header>
+    <h2 class="titulo-home">Painel de controle</h2>
+    <div class="container-fluid">
+        <div class="row justify-content-around mt-5">
+            
+            <div class="col-md-4 text-center">
+                <a href="{% url 'encaminhamentos_page' %}" class="btn btn-primary btn-lg p-5 h-100 w-100">
+                    <i class="bi bi-arrow-right-circle display-1"></i>
+                    <p>Encaminhamentos <br> Pendentes</p>
+                </a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="{% url 'avaliar_page' %}" class="btn btn-success btn-lg p-5 h-100 w-100">
+                    <i class="bi bi-check-circle  display-1"></i>
+                    <p>Avaliar <br> AACC's</p>
+                </a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="{% url 'confirmar_page' %}" class="btn btn-danger btn-lg p-5 h-100 w-100">
+                    <i class="bi bi-cloud-download display-1"></i>
+                    <p>Confirmações <br> Pendentes</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Adicione o link para o Bootstrap JS (opcional, dependendo das funcionalidades que você está usando) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    </body>
+</html>

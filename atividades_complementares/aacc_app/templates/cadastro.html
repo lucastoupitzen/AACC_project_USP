@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div>
+        <div class="login-container">
+            <h2 class="text-center mb-4">Cadastro</h2>
+            <form action="{% url 'cadastro' %}" method="POST" >
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="primeiro_nome">Primeiro nome:</label>
+                    <input type="text" name="primeiro_nome" class="form-control" id="primeiro_nome" placeholder="Digite seu primeiro nome">
+                </div>
+                <div class="form-group">
+                    <label for="ultimo_nome">Último nome:</label>
+                    <input type="text" name="ultimo_nome" class="form-control" id="ultimo_nome" placeholder="Digite seu ultimo nome">
+                </div>
+                <div class="form-group">
+                    <label for="numeroUsp">Número USP:</label>
+                    <input type="text" name="numerousp" class="form-control" id="numeroUsp" placeholder="Digite seu número USP">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email"  class="form-control" id="email" placeholder="Digite seu email">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" class="form-control" id="senha" placeholder="Digite sua senha">
+                </div>
+                <button type="submit" id="enviarbtn" class="btn btn-primary btn-block">Login</button>
+            </form>
+        </div>
+        
+    </div>
+</body>
+
+</html>

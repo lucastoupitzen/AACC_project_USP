@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+    <title>Coordenador</title>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-light headerusp">
+        <!-- Canto Esquerdo - Logotipo ou Imagem -->
+        <div class="navbar-brand logo" href="#">
+            <img src="{% static 'images/logotipo.png'%}" alt="Logo"  class="d-inline-block align-top">
+        </div>
+
+        <!-- Canto Direito - Barra de Navegação -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <p class="nav-link text-light" >{{ request.user.first_name }} {{ request.user.last_name }}</p>
+                </li>
+                <li class="nav-item">
+                    <p class="nav-link text-light" id="nrousp">{{ request.user }}</p>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ajuda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Sair</a>
+                </li>
+                
+            </ul>
+        </div>
+    </header>
+    <div class="container mt-5 mainframe">
+        <h2 class="titulo-tabela">Confirmar avaliações das AACC's</h2>
+        <div class="scrollable-div">
+            <div class="table-responsive">
+                <table class="table table-borderless table-sm">
+                    <tbody class="tabela-corpo">
+                        <thead>
+                            <tr>
+                                <th class="text-center w-20">Data de envio</th>
+                                <th class="text-center w-20">Status</th>
+                                <th class="text-center w-20">Documento</th>
+                                <th class="text-center w-20">Ver avaliação</th>
+                                <th class="text-center w-20">Confirmar</th>
+                            </tr>
+                        </thead>
+                    
+                       
+                        
+
+                        <!-- Adicione mais linhas conforme necessário... -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalAvaliacao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Detalhes da Avaliação</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Campo de Comentários Realizados -->
+                    <div class="mb-3">
+                        <label for="comentarios" class="form-label">Comentários Realizados:</label>
+                        <textarea class="form-control" id="comentarios" rows="3" readonly></textarea>
+                    </div>
+                    <!-- Campo de Status -->
+                    <div class="mb-3">
+                        <label for="status" class="form-label">Status:</label>
+                        <p id="status"> </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script src="{% static 'js/confirmar.js' %}"></script>
+</html>
